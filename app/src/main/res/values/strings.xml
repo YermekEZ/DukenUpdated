@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Duken</string>
+    <string name="search">Search</string>
+    <string name="addProduct">Add product</string>
+    <string name="shoppingCart">Shopping cart</string>
+    <string name="myProfile">My profile</string>
+    <string name="name">Name</string>
+    <string name="surname">Surname</string>
+    <string name="barcodeNumber">Barcode number</string>
+    <string name="price">Price ($)</string>
+    <string name="quantity">Quantity</string>
+    <string name="save">Save</string>
+    <string name="newOrder">New order</string>
+    <string name="makeOrder">Make order for $0</string>
+    <string name="listOfProducts">List of products</string>
+    <string name="searchProducts">Search for products</string>
+    <string name="welcome">Welcome to Duken!</string>
+    <string name="enterPhoneNumber">Please, enter your phone number to continue</string>
+    <string name="continueButton">Continue</string>
+    <string name="enterCode">Enter confirmation code</string>
+    <string name="enterCode2">Verification code has been sent to the following phone number</string>
+    <string name="resendCode"><u>Resend code</u></string>
+    <string name="userInformation">Let us know a bit more about you</string>
+    <string name="stateId">Your state ID</string>
+    <string name="infoScan">Place barcode in the frame above to scan it</string>
+</resources>

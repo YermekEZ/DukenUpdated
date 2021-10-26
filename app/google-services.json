@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "472397011890",
+    "project_id": "dukenupdated",
+    "storage_bucket": "dukenupdated.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:472397011890:android:065310f403d4b508f022ab",
+        "android_client_info": {
+          "package_name": "com.example.duken"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "472397011890-7n0t07topklu2cf632jmlhn848mv84tl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.duken",
+            "certificate_hash": "ae3756a61c35bb0a26b1e4c473a9533dbc50b8ae"
+          }
+        },
+        {
+          "client_id": "472397011890-moqr3c2ggv1cfce8b8l3c4dda7log676.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZcCabpyWb5xCXrs_4JnyJdgG_bsKg3KE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "472397011890-moqr3c2ggv1cfce8b8l3c4dda7log676.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
