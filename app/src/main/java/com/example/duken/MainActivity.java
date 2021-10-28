@@ -16,7 +16,7 @@ import com.google.android.gms.common.api.CommonStatusCodes;
 import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnItemSelectedListener, AddProductFragment.AddProductFragmentListener, EnterCountDialog.EnterCountDialogListener{
+public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnItemSelectedListener, AddProductFragment.AddProductFragmentListener, EnterCountDialog.EnterCountDialogListener, ShoppingCartFragment.ShoppingCartFragmentListener{
 
     private BottomNavigationView bottomNavigationView;
     private Fragment addProductFragment, myProfileFragment, activeFragment;
