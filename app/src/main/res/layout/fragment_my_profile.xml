@@ -5,12 +5,68 @@
     android:layout_height="match_parent"
     tools:context=".MyProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/myProfileTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="My profile fragment"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"/>
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/myProfile"
+        android:textColor="@color/headerText"
+        android:textSize="18sp" />
+
+    <ImageButton
+        android:id="@+id/logoutImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@null"
+        android:src="@drawable/ic_exit" />
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/myProfileTextView"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        tools:text="Name"/>
+
+    <TextView
+        android:id="@+id/surnameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/nameTextView"
+        android:layout_below="@id/myProfileTextView"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="4dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        tools:text="Surname"/>
+
+    <TextView
+        android:id="@+id/phoneNumberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameTextView"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:textSize="12sp"
+        tools:text="+7(777)-777-7777"/>
+
+    <ImageButton
+        android:id="@+id/editImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/myProfileTextView"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_toEndOf="@id/surnameTextView"
+        android:background="@null"
+        android:src="@drawable/ic_edit" />
 
 </RelativeLayout>

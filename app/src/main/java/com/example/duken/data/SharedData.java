@@ -2,7 +2,7 @@ package com.example.duken.data;
 
 public class SharedData {
 
-    static String phoneNumber, barcodeNumber;
+    static String phoneNumber, barcodeNumber, name, surname, stateId;
     static boolean registered = false;
     static int maxCount;
 
@@ -40,5 +40,29 @@ public class SharedData {
 
     public static void setMaxCount(int maxCount) {
         SharedData.maxCount = maxCount;
+    }
+
+    public static String getName() {
+        return name;
+    }
+
+    public static String getSurname() {
+        return surname;
+    }
+
+    public static void setName(String name) {
+        SharedData.name = name;
+    }
+
+    public static void setSurname(String surname) {
+        SharedData.surname = surname;
+    }
+
+    public static String getStateId() {
+        return stateId;
+    }
+
+    public static void setStateId(String stateId) {
+        SharedData.stateId = stateId;
     }
 }

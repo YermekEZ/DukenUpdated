@@ -7,27 +7,56 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import android.content.Intent;
+import android.graphics.Shader;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 
+import com.example.duken.data.AddProfileData;
+import com.example.duken.data.SharedData;
+import com.example.duken.dialog.EditProfileDataDialog;
 import com.example.duken.dialog.EnterCountDialog;
 import com.google.android.gms.common.api.CommonStatusCodes;
 import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
-public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnItemSelectedListener, AddProductFragment.AddProductFragmentListener, EnterCountDialog.EnterCountDialogListener, ShoppingCartFragment.ShoppingCartFragmentListener{
+public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnItemSelectedListener, AddProductFragment.AddProductFragmentListener, EnterCountDialog.EnterCountDialogListener, ShoppingCartFragment.ShoppingCartFragmentListener, EditProfileDataDialog.EditProfileDataDialogListener {
 
     private BottomNavigationView bottomNavigationView;
-    private Fragment addProductFragment, myProfileFragment, activeFragment;
+    private Fragment addProductFragment, activeFragment;
     private SearchFragment searchFragment;
     private ShoppingCartFragment shoppingCartFragment;
+    private MyProfileFragment myProfileFragment;
     private FragmentManager fragmentManager;
+
+    private FirebaseDatabase mFirebaseDatabase;
+    private DatabaseReference mDatabaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mFirebaseDatabase = FirebaseDatabase.getInstance();
+        mDatabaseReference = mFirebaseDatabase.getReference();
+
+        mDatabaseReference.child("users").child(SharedData.getPhoneNumber()).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                AddProfileData addProfileData = snapshot.getValue(AddProfileData.class);
+                SharedData.setStateId(addProfileData.getmStateID());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
         searchFragment = new SearchFragment();
         addProductFragment = new AddProductFragment();
@@ -92,5 +121,10 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     @Override
     public void setCount(String pieces) {
         shoppingCartFragment.setCount(pieces);
+    }
+
+    @Override
+    public void completeEdition(String name, String surname) {
+        myProfileFragment.completeEdition(name, surname);
     }
 }
