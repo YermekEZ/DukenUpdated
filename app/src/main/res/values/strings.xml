@@ -23,4 +23,5 @@
     <string name="userInformation">Let us know a bit more about you</string>
     <string name="stateId">Your state ID</string>
     <string name="infoScan">Place barcode in the frame above to scan it</string>
+    <string name="seeOrderHistory">See order history</string>
 </resources>

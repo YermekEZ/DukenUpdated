@@ -79,6 +79,6 @@
         android:background="@color/buttonColor"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        tools:text="See order history" />
+        android:text="@string/seeOrderHistory"/>
 
 </RelativeLayout>
