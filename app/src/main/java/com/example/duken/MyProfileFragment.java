@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,6 +28,7 @@ public class MyProfileFragment extends Fragment implements EditProfileDataDialog
 
     private TextView nameTextView, surnameTextView, phoneNumberTextView;
     private ImageButton logOutImageButton, editProfileImageButton;
+    private Button orderHistoryButton;
 
     private FirebaseDatabase mFirebaseDatabase;
     private DatabaseReference mDatabaseReference;
@@ -46,10 +48,19 @@ public class MyProfileFragment extends Fragment implements EditProfileDataDialog
         logOutImageButton = view.findViewById(R.id.logoutImageButton);
         editProfileImageButton = view.findViewById(R.id.editImageButton);
 
+        orderHistoryButton = view.findViewById(R.id.orderHistoryButton);
+
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         mDatabaseReference = mFirebaseDatabase.getReference();
 
         loadUserData();
+
+        orderHistoryButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getContext(), "Not developed yet:(", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         FirebaseAuth.AuthStateListener mAuthStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
